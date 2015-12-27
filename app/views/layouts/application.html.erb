@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TAS Track and Field 2016 <%=yield (:title)%></title>
-  <%= stylesheet_link_tag'application', media: 'all', 'data-turbolinks-track' => true %>
+    <title><%= fill_title(<yield(:title)) %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag “https://fonts.googleapis.com/icon?family=Material+Icons" %>
   <%= javascript_include_tag'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
