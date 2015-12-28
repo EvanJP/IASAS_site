@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
     root 'static_pages#home'
-    get 'static_pages/streams'
-    get 'static_pages/profiles'
-    get 'static_pages/hfame'
+    get 'streams' => 'static_pages#streams'
+    get 'profiles' => 'static_pages#profiles'
+    get 'hfame' => 'static_pages#hfame'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

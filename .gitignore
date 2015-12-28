@@ -15,3 +15,17 @@
 /log/*
 !/log/.keep
 /tmp
+
+# ignore contents of bower_components
+vendor/bower_components/*
+
+# unignore jquery folder
+!vendor/bower_components/jquery
+# ignore contents of jquery folder
+vendor/bower_components/jquery/*  
+# except dist
+!vendor/bower_components/jquery/dist
+
+
+# unignore Materialize folder
+!vendor/bower_components/Materialize

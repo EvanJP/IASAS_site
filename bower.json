@@ -1,0 +1,22 @@
+{
+  "name": "IASAS_Site",
+  "homepage": "https://github.com/PallyPenguin/IASAS_site",
+  "description": "TAS IASAS Site Track and Field 2016",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Evan P"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.5"
+  }
+}
