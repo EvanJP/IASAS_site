@@ -1,0 +1,30 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">TAS Track &amp; Field 2016</a>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <%= link_to "Home", root_path %>
+            </li>
+            <li>
+                <%= link_to "Streams", streams_path %>
+            </li>
+            <li>
+                <%= link_to "Profiles", profiles_path %>
+            </li>
+            <li>
+                <%= link_to "Hall of Fame", hfame_path %>
+            </li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <!-- This should go to signup -->
+            <li>
+                <%= link_to signup_path do%>
+                    <i class="material-icons">input</i>
+                <% end %>
+            </li>
+        </ul>
+    </div>
+</nav>
