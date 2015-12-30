@@ -14,17 +14,21 @@
             <li>
                 <%= link_to "Hall of Fame", hfame_path %>
             </li>
+            <li>
+                <%= link_to "User Profiles", userprof_path %>
+            </li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
             <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
             <!-- This should go to signup -->
-            <li>
-                <%= link_to signup_path do%>
-                    <i class="material-icons">input</i>
-                <% end %>
-            </li>
+            <% if current_user %>
+            <li> <%= image_tag current_user.image_url, alt: current_user.name %> </li>
+            <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
+            <% else %>
+                <li><%= link_to 'Sign in', '/auth/google'%></li>
+            <% end %>
         </ul>
     </div>
 </nav>

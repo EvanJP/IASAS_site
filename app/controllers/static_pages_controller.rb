@@ -14,4 +14,8 @@ class StaticPagesController < ApplicationController
     def hfame
         
     end
+    
+    def userprof
+        
+    end
 end
