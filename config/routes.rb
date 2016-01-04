@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
     root 'static_pages#home'
     get 'streams' => 'static_pages#streams'
     get 'profiles' => 'static_pages#profiles'
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
     delete '/logout' => 'sessions#destroy'
     get "/auth/:provider/callback" => 'sessions#create'
     get 'userprof' => 'static_pages#userprof'
+    resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151230032823) do
+ActiveRecord::Schema.define(version: 20160104060658) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "event"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "userevents", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",   null: false
@@ -22,6 +35,10 @@ ActiveRecord::Schema.define(version: 20151230032823) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "school"
+    t.string   "events"
+    t.string   "info"
+    t.string   "email"
   end
 
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true

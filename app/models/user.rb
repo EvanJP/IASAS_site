@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
             user.location = auth_hash['info']['location']
             user.image_url = auth_hash['info']['image']
             user.url = auth_hash['info']['urls']['user.provide.capitalize']
+            user.email = auth_hash['info']['email']
+            user.school = nil
             user.save!
             user
         end
     end
+    has_many :userevents
+        has_many :events, :through => :userevents
 end
