@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">TAS Track &amp; Field 2016</a>
+        <%= link_to "TAS Track & Field 2016", root_path, class: "brand-logo center" %>
         <ul id="slide-out" class="side-nav">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Streams", streams_path %></li>
@@ -14,6 +14,7 @@
         </a>
         <ul id="dropdown1" class="dropdown-content">
             <li><%= link_to 'Profile', current_user %></li>
+            <li><%= link_to 'Settings', edit_user_path(current_user) %></li>
             <li class="divider"></li>
             <li><%= link_to 'Log Out', logout_path, method: :delete %>
             </li>
