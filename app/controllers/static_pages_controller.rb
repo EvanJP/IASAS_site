@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
     end
     
     def profiles
-    
+        @profiles = User.all
     end
     
     def hfame

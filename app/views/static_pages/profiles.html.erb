@@ -1,22 +1,20 @@
 <% provide(:title, "Profiles")%>
-
-    <body>
-        <div class="row">
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
+<div class = "row">
+    <% @profiles.each do |profile| %>
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="http://placehold.it/480x480">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Profile Name<i class="material-icons right">close</i></span>
+                        <p>Information about player</p>
+                    <p>Player Email: <%= profile.email %> </p>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-        </div>
-        <div class="row">
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-            <%= render 'layouts/profile' %>
-        </div>
-    </body>
+    <% end %>
+</div>

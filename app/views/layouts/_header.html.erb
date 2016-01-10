@@ -1,17 +1,13 @@
 <nav>
     <div class="nav-wrapper">
-        <%= link_to "TAS Track & Field 2016", root_path, class: "brand-logo center" %>
-        <ul id="slide-out" class="side-nav">
+        <a class = "brand-logo center">TAS Track &amp; Field 2016</a>
+        <ul id="slide-out" class="side-nav fixed">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Streams", streams_path %></li>
-            <li><%= link_to "Profiles", profiles_path %>
-            </li>
-            <li><%= link_to "Hall of Fame", hfame_path %>
-            </li>
+            <li><%= link_to "Profiles", profiles_path %></li>
+            <li><%= link_to "Hall of Fame", hfame_path %></li>
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
-            <i class="material-icons">menu</i>
-        </a>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul id="dropdown1" class="dropdown-content">
             <li><%= link_to 'Profile', current_user %></li>
 
