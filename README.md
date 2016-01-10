@@ -26,6 +26,13 @@ Goals for IASAS Track and Field @ TAS 2016 Website:
 * Streams
   * Side by side streams
   * Tabbed streams
+  
+  TODO:
+  * Fix CSS and JS Framework
+  * Schedule
+  * Hall of Fame
+  * More social aspects
+  
 
 
 
