@@ -12,7 +12,14 @@
                             <%= current_user.email %>
                         </p>
                         <p> Events:
-                            <%= current_user.events %>
+                            <ul>
+                            <% if current_user.events != nil %>
+                                <% @eventarr.each do |event| %>
+                                    <li><%= event %></li>
+                                <% end %>
+                            <% end %>
+                            </ul>
+
                         </p>
                         <% else %>
                             <p> Please sign in </p>
