@@ -12,6 +12,7 @@ gem 'materialize-sass'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'json'
+gem 'rake'
 # Use SCSS for stylesheets
 
 group :development, :test do
