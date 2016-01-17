@@ -22,7 +22,8 @@ class UsersController < ApplicationController
                 current_user.userevents.build(:event_id => event)
             end
         end
-
+        current_user.save!
+        redirect_to current_user
     end
     
     def find_school(school = '')
