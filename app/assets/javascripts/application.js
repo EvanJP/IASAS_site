@@ -14,10 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require materialize-sprockets
-$(document).ready(function () {
-    $(".button-collapse").sideNav();
-    $(".dropdown-button").dropdown();
-    $('select').material_select();
-    $('ul.tabs').tabs();
-});

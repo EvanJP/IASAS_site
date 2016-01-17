@@ -1,13 +1,13 @@
     <% provide(:title, "Edit Profile")%>
-        <%= form_for current_user, :html => {:class => 'col s12'}  do |f| %>
+<%= form_for current_user, :html => {:class => 'col-md-12'}  do |f| %>
             <div class="row">
-                <div class="input-field col s12 m8 l8">
+                <div class="input-field col-md-8">
                     <%= fields_for(@user_events) do |ue| %>
                         <%= collection_select(:events, :id, @all_events, :id, :event, {}, 
                                              {:multiple => true}) %>
                 </div>
                 <div class="section">
-                    <div class="col s12 m4 l4">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-image">
                                 <%= image_tag current_user.image_url %>
@@ -20,6 +20,6 @@
                     </div>
                 </div>
                 <% end %>
-                <%= f.submit "Save changes", class: "btn waves-effect waves-light"%>
+                <%= f.submit "Save changes", class: "btn btn-primary waves-effect waves-light"%>
             <% end %>
             </div>

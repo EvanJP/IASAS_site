@@ -1,60 +1,33 @@
-<% provide(:title, "Edit Profile")%>
-    <div class="row">
-        <div class="section">
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Preview</span>
-                        <p>This is for the preview</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <form class="col s12 m8 l8">
-            <div class="row">
-                <div class="input-field col s12">
-                    <select multiple>
-                        <option value="" disabled selected>Select Running Events</option>
-                        <option value="1">100m</option>
-                        <option value="2">200m</option>
-                        <option value="3">400m</option>
-                        <option value="4">800m</option>
-                        <option value="5">1500m</option>
-                        <option value="6">3000m</option>
-                    </select>
-                    <label>Running Events Selection</label>
-                </div>
-                <div class="input-field col s12">
-                    <select multiple>
-                        <option value="" disabled selected>Select Relay Events</option>
-                        <option value="7">4x100m Relay</option>
-                        <option value="8">4x400m Relay</option>
-                        <option value="9">4x800m Relay</option>
-                        <option value="10">1600m Medley Relay</option>
-                    </select>
-                    <label>Relay Events Selection</label>
-                </div>
-                <div class="input-field col s12">
-                    <select multiple>
-                        <option value="" disabled selected>Select Hurdle Events</option>
-                        <option value="11">100m Hurdles</option>
-                        <option value="12">110m Hurdles</option>
-                        <option value="13">400m Hurdles</option>
-                    </select>
-                    <label>Hurdle Events Selection</label>
-                </div>
-                <div class="input-field col s12">
-                    <select multiple>
-                        <option value="" disabled selected>Select Field Events</option>
-                        <option value="14">Discus</option>
-                        <option value="15">High Jump</option>
-                        <option value="16">Javelin</option>
-                        <option value="17">Long Jump</option>
-                        <option value="18">Shot Put</option>
-                        <option value="19">Triple Jump</option>
-                    </select>
-                    <label>Track Events Selection</label>
-                </div>
-            </div>
-        </form>
+<nav>
+    <div class="nav-wrapper">
+        <a class = "brand-logo center">TAS Track &amp; Field 2016</a>
+        <ul id="slide-out" class="side-nav fixed">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Streams", streams_path %></li>
+            <li><%= link_to "Profiles", profiles_path %></li>
+            <li><%= link_to "Hall of Fame", hfame_path %></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><%= link_to 'Profile', current_user %></li>
+
+            <li class="divider"></li>
+            <li><%= link_to 'Log Out', logout_path, method: :delete %>
+            </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <!-- This should go to signup -->
+            <% if current_user %>
+                <li>
+                    <a class="dropdown-button" href="#!" data-activates="dropdown1">
+                        <%= image_tag current_user.image_url, alt: current_user.name %>
+                            <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
+                <% else %>
+                    <li><%= link_to 'Sign in', '/auth/google'%>
+                    </li>
+                    <% end %>
+        </ul>
     </div>
+</nav>

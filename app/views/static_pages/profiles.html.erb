@@ -1,27 +1,16 @@
 <% provide(:title, "Profiles")%>
 <div class = "row">
-    <div class = "col s12">
-        <ul class="tabs">
-            <li class="tab col s2"><a href="#tas">TAS</a></li>
-            <li class="tab col s2"><a href="#isb">ISB</a></li>
-            <li class="tab col s2"><a href="#iskl">ISKL</a></li>
-            <li class="tab col s2"><a href="#ism">ISM</a></li>
-            <li class="tab col s2"><a href="#jis">JIS</a></li>
-            <li class="tab col s2"><a href="#sas">SAS</a></li>
-        </ul>
-        <div id="tas" class="col s12">
+    <div class = "col-md-12">
+        <div id="tas" class="col-md-12">
         <% @profiles.each do |profile| %>
-            <% if profile.school == "TAS" && profile.role == "athlete"%>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src= "<%= profile.image_url %>" >
+            <% if profile.school == "TAS"%>
+                <div class="col-md-3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src= "<%= profile.image_url %>" >
+                            <span class="card-title"><%= profile.name%></span>
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><%= profile.name %><i class="material-icons right">close</i></span>
                             <p>Information about player</p>
                             <p>Email: <%= profile.email %> </p>
                             <p>ID: <%= profile.id %> </p>
@@ -40,19 +29,16 @@
             <% end %>
         <% end %>        
         </div>
-        <div id="isb" class="col s12">
+         <div id="ism" class="col-md-12">
         <% @profiles.each do |profile| %>
-            <% if profile.school == "ISB" && profile.role == "athlete"%>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src= "<%= profile.image_url %>" >
+            <% if profile.school == "ISM"%>
+                <div class="col-md-3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src= "<%= profile.image_url %>" >
+                            <span class="card-title"><%= profile.name%></span>
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><%= profile.name %><i class="material-icons right">close</i></span>
                             <p>Information about player</p>
                             <p>Email: <%= profile.email %> </p>
                             <p>ID: <%= profile.id %> </p>
@@ -69,21 +55,18 @@
                     </div>
                 </div>
             <% end %>
-        <% end %>    
+        <% end %>        
         </div>
-        <div id="iskl" class="col s12">
+        <div id="iskl" class="col-md-12">
         <% @profiles.each do |profile| %>
             <% if profile.school == "ISKL" && profile.role == "athlete"%>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src= "<%= profile.image_url %>" >
+                <div class="col-md-3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src= "<%= profile.image_url %>" >
+                            <span class="card-title"><%= profile.name%></span>
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><%= profile.name %><i class="material-icons right">close</i></span>
                             <p>Information about player</p>
                             <p>Email: <%= profile.email %> </p>
                             <p>ID: <%= profile.id %> </p>
@@ -100,21 +83,18 @@
                     </div>
                 </div>
             <% end %>
-        <% end %>    
+        <% end %>        
         </div>
-        <div id="ism" class="col s12">
+        <div id="isb" class="col-md-12">
         <% @profiles.each do |profile| %>
-            <% if profile.school == "ISM" && profile.role == "athlete" %>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src= "<%= profile.image_url %>" >
+            <% if profile.school == "ISB" && profile.role == "athlete"%>
+                <div class="col-md-3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src= "<%= profile.image_url %>" >
+                            <span class="card-title"><%= profile.name%></span>
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><%= profile.name %><i class="material-icons right">close</i></span>
                             <p>Information about player</p>
                             <p>Email: <%= profile.email %> </p>
                             <p>ID: <%= profile.id %> </p>
@@ -131,21 +111,46 @@
                     </div>
                 </div>
             <% end %>
-        <% end %>    
+        <% end %>        
         </div>
-        <div id="jis" class="col s12">
+        <div id="sas" class="col-md-12">
+        <% @profiles.each do |profile| %>
+            <% if profile.school == "SAS"%>
+                <div class="col-md-3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src= "<%= profile.image_url %>" >
+                            <span class="card-title"><%= profile.name%></span>
+                        </div>
+                        <div class="card-content">
+                            <p>Information about player</p>
+                            <p>Email: <%= profile.email %> </p>
+                            <p>ID: <%= profile.id %> </p>
+                            <p>Events: 
+                                <ul>
+                                    <% unless profile.events == nil %>
+                                        <% profile.events.split.each do |e| %>
+                                            <li> <%= e %> </li>
+                                        <% end %>
+                                    <% end%>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>        
+        </div>
+         <div id="jis" class="col-md-12">
         <% @profiles.each do |profile| %>
             <% if profile.school == "JIS" && profile.role == "athlete"%>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src= "<%= profile.image_url %>" >
+                <div class="col-md-3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src= "<%= profile.image_url %>" >
+                            <span class="card-title"><%= profile.name%></span>
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><%= profile.name %><i class="material-icons right">close</i></span>
                             <p>Information about player</p>
                             <p>Email: <%= profile.email %> </p>
                             <p>ID: <%= profile.id %> </p>
@@ -162,38 +167,7 @@
                     </div>
                 </div>
             <% end %>
-        <% end %>    
-        </div>
-        <div id="sas" class="col s12">
-        <% @profiles.each do |profile| %>
-            <% if profile.school == "SAS" %>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src= "<%= profile.image_url %>" >
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><%= profile.name %> <i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><%= profile.name %><i class="material-icons right">close</i></span>
-                            <p>Information about player</p>
-                            <p>Email: <%= profile.email %> </p>
-                            <p>ID: <%= profile.id %> </p>
-                            <p>Events: 
-                                <ul>
-                                    <% unless profile.events == nil %>
-                                        <% profile.events.split.each do |e| %>
-                                            <li> <%= e %> </li>
-                                        <% end %>
-                                    <% end%>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <% end %>
-        <% end %>    
+        <% end %>        
         </div>
     </div>
 </div>
