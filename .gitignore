@@ -15,7 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
-
+client_secret_100574493267-n1viv4o7nb45q5pe402rvvdpbag92hch.apps.googleusercontent.com.json
+/config/secrets.yml
 # ignore contents of bower_components
 vendor/bower_components/*
 
