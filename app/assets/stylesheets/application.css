@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #03a9f4;
+    padding-left: 240px;
+}
+
+  @media only screen and (max-width : 992px) {
+    body {
+      padding-left: 0;
+    }
+  }
+

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h4>Articles</h4>
+            </li>
+            <li class="collection-item" %>
+                <div><%= link_to 'New Article', new_article_path %></div>
+            </li>
+            <% @articles.each do |article| %>
+            <li class="collection-item" %>
+                <div>
+                    <%= link_to article.title, article %>
+                    <%= link_to edit_article_path(article), class: "secondary-content" do %>
+                        <i class="material-icons">send</i>
+                    <% end %>
+                    <%= link_to article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: "secondary-content" do %>
+                        <i class="material-icons">send</i>
+                    <% end %>
+                </div>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+</div>
