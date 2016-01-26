@@ -1,40 +1,59 @@
-<a href="#" data-activates="slide-out" class="navbar-brand button-collapse"><i class="material-icons">menu</i></a>
-
-<ul id="slide-out" class="side-nav fixed personal-side-nav light-side-nav">
+<ul id="slide-out" class="side-nav fixed default-side-nav light-side-nav black-text">
     <div class="logo-wrapper">
-        <a href="#">
-            <div class="avatar-wrapper">
-                <% if current_user %>
-                <%= image_tag current_user.image_url, class: "img-responsive img-circle" %>
-                <% end %>
-            </div>
-        </a>
-    </div>
-    <div class="about">
-        <% if current_user %>
-        <p> Welcome <%= current_user.name %></p>
-        <% else %>
-        <a href='/auth/google' class="btn btn-default"><i class="material-icons right">exit to app</i>Sign in</a>
-        <% end %>
+        <a href="#"><img src="app/assets/images/mdb.png" class="img-responsive"></a>
     </div>
     <% if current_user %>
-    <ul class="edit list-inline text-center">
-        <%= link_to "Sign Out", logout_path, method: :delete, class: "btn btn-default" do %>
-        <i class="material-icons right">exit to app</i>
-        <% end %>
-    </ul>
+    <div class="about">
+        <p>Welcome <%= current_user.name %></p>      
+    </div>
     <% end %>
+    <!-- Side navigation links -->
     <ul class="collapsible collapsible-accordion">
-        <li><%= link_to "Streams", streams_path, class: "waves-effect" %></li>
-        <li><%= link_to "News", articles_path, class: "waves-effect" %></li>
-            <li><a class="collapsible-header waves-effect">Click me</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="#" class="waves-effect">Link</a></li>
-                        <li><a href="#" class="waves-effect">Link</a></li>
-                        <li><a href="#" class="waves-effect">Link</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+        <li>
+            <a class="collapsible-header waves-effect"></a>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#" class="waves-effect">Link</a></li>
+                    <li><a href="#" class="waves-effect">Link</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a class="collapsible-header waves-effect"></a>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#" class="waves-effect">Link</a></li>
+                    <li><a href="#" class="waves-effect">Link</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
 </ul>
+<nav class="double-navbar navbar navbar-fixed-top purple darken-1 z-depth-1" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header pull-left">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+        </div>
+
+        <!-- Navbar Icons -->
+        <ul class="list-inline pull-right text-center">
+            <% if current_user %>
+            <li><%= link_to logout_path, method: :delete do %>
+                <i class="material-icons right">exit to app</i><br><span>Sign Out</span>
+                <% end %>
+            </li>
+            <li><%= link_to current_user do %>
+                <i class="material-icons right">perm identity</i><br><span>Profile</span>
+                <% end %>
+            </li>
+            <% else %>
+            <li><%= link_to '/auth/google' do %>
+                <i class="material-icons">exit to app</i><br><span>Sign Out</span>
+                <% end %>
+            </li>
+            <% end %>
+        </ul>
+        <!--/. Navbar Icons -->
+    </div>
+</nav>
+<!--/.Navbar-->

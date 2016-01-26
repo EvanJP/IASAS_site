@@ -1,0 +1,41 @@
+
+    <a href="#" data-activates="slide-out" class="navbar-brand button-collapse"><i class="material-icons">menu</i></a>
+
+<ul id="slide-out" class="side-nav fixed personal-side-nav light-side-nav">
+    <div class="logo-wrapper">
+        <a href="#">
+            <div class="avatar-wrapper">
+                <% if current_user %>
+                <%= image_tag current_user.image_url, class: "img-responsive img-circle" %>
+                <% end %>
+            </div>
+        </a>
+    </div>
+    <div class="about">
+        <% if current_user %>
+        <p> Welcome <%= current_user.name %></p>
+        <% else %>
+        <a href='/auth/google' class="btn btn-default"><i class="material-icons right">exit to app</i>Sign in</a>
+        <% end %>
+    </div>
+    <% if current_user %>
+    <ul class="edit list-inline text-center">
+        <%= link_to "Sign Out", logout_path, method: :delete, class: "btn btn-default" do %>
+        <i class="material-icons right">exit to app</i>
+        <% end %>
+    </ul>
+    <% end %>
+    <ul class="collapsible collapsible-accordion">
+        <li><%= link_to "Streams", streams_path, class: "waves-effect" %></li>
+        <li><%= link_to "News", articles_path, class: "waves-effect" %></li>
+            <li><a class="collapsible-header waves-effect">Click me</a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#" class="waves-effect">Link</a></li>
+                        <li><a href="#" class="waves-effect">Link</a></li>
+                        <li><a href="#" class="waves-effect">Link</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+</ul>
