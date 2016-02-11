@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     get 'profiles' => 'static_pages#profiles'
     get 'booster' => 'static_pages#booster'
     get 'guidelines' => 'static_pages#guidelines'
-    get 'introletter' => 'static_pages#introletter'
     get 'schedule' => 'static_pages#schedule'
     get 'eventlist' => 'static_pages#eventlist'
     get 'hfame' => 'static_pages#hfame'

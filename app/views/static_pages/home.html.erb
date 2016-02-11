@@ -1,63 +1,76 @@
 <% provide(:title, "Home")%>
 <!-- Stream "section" div -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-image">
-                    <img src="http://placehold.it/853x480">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Main Stream</span>
-                </div>
-                <div class="card-action">
-                    <%= link_to "Streams", streams_path %>
-                </div>
-            </div>
-        </div>
+<div id="intro" class="modal">
+    <div class="modal-content">
+        <h4>A Word From Someone</h4>
+        <p>Welcome to IASAS Track and Field at TAS</p>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card hoverable">
-                <div class="view overlay hm-white-slight z-depth-1">
-                    <img src="http://placehold.it/480x480">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">News 1</span>
-                    <p>Title</p>
-                </div>
-                <div class="card-action">
-                    <a> Read More </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card hoverable">
-                <div class="view overlay hm-white-slight z-depth-1">
-                    <img src="http://placehold.it/480x480">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">News 2</span>
-                    <p>Title</p>
-                </div>
-                <div class="card-action">
-                    <a> Read More </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card hoverable">
-                <div class="view overlay hm-white-slight z-depth-1">
-                    <img src="http://placehold.it/480x480">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">News 3</span>
-                    <p>Title</p>
-                </div>
-                <div class="card-action">
-                    <a> Read More </a>
-                </div>
-            </div>
-        </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Close</a>
     </div>
 </div>
+
+<div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="stream card">
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        This is for the stream
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Link Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="http://placehold.it/480x480">
+                        <span class="card-title">News Title</span>
+                    </div>
+                    <div class="card-content">
+                        Article Info
+                    </div>
+                    <div class="card-action">
+                        <a href="#"> Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="http://placehold.it/480x480">
+                        <span class="card-title">News Title</span>
+                    </div>
+                    <div class="card-content">
+                        Article Info
+                    </div>
+                    <div class="card-action">
+                        <a href="#"> Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="http://placehold.it/480x480">
+                        <span class="card-title">News Title</span>
+                    </div>
+                    <div class="card-content">
+                        Article Info
+                    </div>
+                    <div class="card-action">
+                        <a href="#"> Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

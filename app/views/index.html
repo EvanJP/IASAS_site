@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div id="letter" class="modal">
+        <div class="modal-content">
+            <h4>Introduction Letter</h4>
+            <p>This is an intro letter</p>
+        </div>
+        <div class="modal-footer">
+            <a herf="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <ul id="dropProf" class="dropdown-content">
+        <li><a href="#!">View Profile</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Sign Out</a></li>
+    </ul>
+    <nav class="blue lighten-1" role="navigation">
+        <div class="topnav"><a id="logo-container" href="#" class="brand-logo">Home</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-button" href="#!" data-activates="dropProf">Welcome User<i class="material-icons right">arrow_drop_down</i></a></li>
+                <!-- <li><a href="#"><i class="material-icons right">input</i>Sign In</a></li> -->
+            </ul>
+            <ul id="slide-out" class="side-nav fixed">
+                <li class="logo">
+                    <a id="logo-container" href="index.html" class="brand-logo">
+                        <img src="http://placehold.it/175x65">
+                    </a>                
+                </li>
+                <li><a href="streams.html">Streams</a></li>
+                <li><a href="schedules.html">Schedules</a></li>
+                <li><a href="athletes.html">Athletes</a></li>
+                <li><a href="hall.html">Hall of Fame</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="around.html">Around TAS</a></li>
+                <li><a href="booster.html">PTA Booster</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">Event Guidelines</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#!">Doc 1</a></li>
+                                    <li><a href="#!">Doc 2</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons left">menu</i></a>
+        </div>
+    </nav>
+    <!-- End NavBar -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="stream card">
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        This is for the stream
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Link Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="http://placehold.it/480x480">
+                        <span class="card-title">News Title</span>
+                    </div>
+                    <div class="card-content">
+                        Article Info
+                    </div>
+                    <div class="card-action">
+                        <a href="#"> Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="http://placehold.it/480x480">
+                        <span class="card-title">News Title</span>
+                    </div>
+                    <div class="card-content">
+                        Article Info
+                    </div>
+                    <div class="card-action">
+                        <a href="#"> Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="http://placehold.it/480x480">
+                        <span class="card-title">News Title</span>
+                    </div>
+                    <div class="card-content">
+                        Article Info
+                    </div>
+                    <div class="card-action">
+                        <a href="#"> Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
     end
     
     def profiles
+        @users = User.all
     end
     
     def hfame
@@ -27,5 +28,8 @@ class StaticPagesController < ApplicationController
     end
     
     def schedule
+        @events = Event.all
+        @users = User.all
+        @userevents = Userevent.all
     end
 end

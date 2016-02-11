@@ -2,19 +2,36 @@
     <div class="row">
         <div class="card">
             <div class="card-content">
-                <p>
-                    <strong> Title: </strong>
-                    <%= @article.title %>
-                </p>
-                <p>
-                    <strong>Text: </strong>
-                    <%= @article.text %>
-                </p>
-                <%= link_to 'Back', articles_path %>
+                    <h4><%= @article.title %></h4>
+                    <%= simple_format(@article.text) %>
             </div>
             <div class="card-action">
-                <%= link_to 'Edit', edit_article_path(@article) %>
+            <%= link_to 'Back', articles_path %>
             </div>
         </div>
     </div>
+    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+        <%= link_to edit_article_path(@article), class: "btn-floating btn-large orange" do%>
+        <i class="large material-icons">mode_edit</i>
+        <% end %>
+    </div>
+    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 96px;">
+        <a class="btn-floating btn-large red modal-trigger" href="#delete">
+            <i class="large material-icons">delete</i>
+        </a>
+    </div>
 </div>
+
+
+<div id="delete" class="modal">
+    <div class="modal-content">'
+        <h4>Delete Confirmation</h4>
+        <p>Are you sure you would like to delete this article? This action cannot be reverted.</p>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Nevermind.</a>
+        <%= link_to "Yes, Delete.", article_path(@article), method: :delete, class: "modal-action modal-close waves-effect waves-red btn-flat" %>
+    </div>
+</div>
+
+

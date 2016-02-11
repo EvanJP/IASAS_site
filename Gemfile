@@ -13,6 +13,8 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'json'
 gem 'rake'
+gem 'jquery-turbolinks'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 # Use SCSS for stylesheets
 
 group :development, :test do

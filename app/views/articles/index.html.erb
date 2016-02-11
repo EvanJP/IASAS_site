@@ -1,25 +1,61 @@
+<% provide(:title, "News")%>
 <div class="container">
     <div class="row">
-        <ul class="collection with-header">
-            <li class="collection-header">
-                <h4>Articles</h4>
-            </li>
-            <li class="collection-item" %>
-                <div><%= link_to 'New Article', new_article_path %></div>
-            </li>
-            <% @articles.each do |article| %>
-            <li class="collection-item" %>
-                <div>
-                    <%= link_to article.title, article %>
-                    <%= link_to edit_article_path(article), class: "secondary-content" do %>
-                        <i class="material-icons">send</i>
+        <div class="col s12">
+            <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="http://placehold.it/580x250">
+                    <div class="caption center-align">
+                        <h3>Article Title</h3>
+                        <h5 class="light grey-text text-ligten-3">Article Slogan</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placehold.it/580x250">
+                    <div class="caption center-align">
+                        <h3>Article Title</h3>
+                        <h5 class="light grey-text text-ligten-3">Article Slogan</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placehold.it/580x250">
+                    <div class="caption center-align">
+                        <h3>Article Title</h3>
+                        <h5 class="light grey-text text-ligten-3">Article Slogan</h5>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <% @articles.each do |article| %>
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag article.image.url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4"><%= article.title %></span>
+                </div>
+                <div class="card-action">
+                    <%= link_to "Read More", article %>
+                    <%= link_to edit_article_path(article) do %>
+                    <i class="material-icons right">input</i>
                     <% end %>
-                    <%= link_to article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: "secondary-content" do %>
-                        <i class="material-icons">send</i>
                     <% end %>
                 </div>
-            </li>
-            <% end %>
-        </ul>
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <%= link_to new_article_path, class: "btn-floating orange" do %>
+        <i class="large material-icons">mode_edit</i>
+    <% end %>
 </div>

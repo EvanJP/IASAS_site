@@ -1,59 +1,47 @@
-<ul id="slide-out" class="side-nav fixed default-side-nav light-side-nav black-text">
-    <div class="logo-wrapper">
-        <a href="#"><img src="app/assets/images/mdb.png" class="img-responsive"></a>
-    </div>
+<ul id="dropProf" class="dropdown-content">
     <% if current_user %>
-    <div class="about">
-        <p>Welcome <%= current_user.name %></p>      
-    </div>
+    <%= link_to "View Profile", current_user %>
+    <li class="divider"></li>
+    <%= link_to "Sign Out", logout_path, method: :delete %>
     <% end %>
-    <!-- Side navigation links -->
-    <ul class="collapsible collapsible-accordion">
-        <li>
-            <a class="collapsible-header waves-effect"></a>
-            <div class="collapsible-body">
-                <ul>
-                    <li><a href="#" class="waves-effect">Link</a></li>
-                    <li><a href="#" class="waves-effect">Link</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect"></a>
-            <div class="collapsible-body">
-                <ul>
-                    <li><a href="#" class="waves-effect">Link</a></li>
-                    <li><a href="#" class="waves-effect">Link</a></li>
-                </ul>
-            </div>
-        </li>
-    </ul>
 </ul>
-<nav class="double-navbar navbar navbar-fixed-top purple darken-1 z-depth-1" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header pull-left">
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+    <nav class="blue lighten-1" role="navigation">
+        <div class="topnav"><a id="logo-container" href="#" class="brand-logo"><%= yield(:title) %></a>
+            <ul class="right hide-on-med-and-down">
+                <% if current_user %>
+                <li><a class="dropdown-button" href="#!" data-activates="dropProf">Welcome User<i class="material-icons right">arrow_drop_down</i></a></li>
+                <% else %>
+                <li><a href="/auth/google"><i class="material-icons right">input</i>Sign In</a></li> 
+                <% end %>
+            </ul>
+            <ul id="slide-out" class="side-nav fixed">
+                <li class="logo">
+                    <a id="logo-container" href= '<%= root_path %>' class="brand-logo">
+                        <img src="http://placehold.it/175x65">
+                    </a>                
+                </li>
+                <li>Dummy</li>
+                <li><%= link_to "Streams", streams_path %></li>
+                <li><%= link_to "Schedule", schedule_path %></li>
+                <li><%= link_to "Team Rosters", profiles_path %></li>
+                <li><%= link_to "Hall of Fame", hfame_path %></li>
+                <li><%= link_to "News", '/articles' %></li>
+                <li><a href="around.html">Around TAS</a></li>
+                <li><%= link_to "PTA Booster", booster_path %></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">Event Guidelines</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#!">Doc 1</a></li>
+                                    <li><a href="#!">Doc 2</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons left">menu</i></a>
         </div>
-
-        <!-- Navbar Icons -->
-        <ul class="list-inline pull-right text-center">
-            <% if current_user %>
-            <li><%= link_to logout_path, method: :delete do %>
-                <i class="material-icons right">exit to app</i><br><span>Sign Out</span>
-                <% end %>
-            </li>
-            <li><%= link_to current_user do %>
-                <i class="material-icons right">perm identity</i><br><span>Profile</span>
-                <% end %>
-            </li>
-            <% else %>
-            <li><%= link_to '/auth/google' do %>
-                <i class="material-icons">exit to app</i><br><span>Sign Out</span>
-                <% end %>
-            </li>
-            <% end %>
-        </ul>
-        <!--/. Navbar Icons -->
-    </div>
-</nav>
-<!--/.Navbar-->
+    </nav>

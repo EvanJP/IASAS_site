@@ -1,5 +1,147 @@
 <% provide(:title, "Profiles")%>
-
-    <body>
-        <p> This is a temp</p>
-    </body>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s2"><a href="#tas">TAS</a></li>
+                <li class="tab col s2"><a href="#ism">ISM</a></li>
+                <li class="tab col s2"><a href="#iskl">ISKL</a></li>
+                <li class="tab col s2"><a href="#sas">SAS</a></li>
+                <li class="tab col s2"><a href="#isb">ISB</a></li>
+                <li class="tab col s2"><a href="#jis">JIS</a></li>
+            </ul>
+        </div>
+        <div id="tas" class="col s12">
+            <% @users.each do |u| %>
+            <% if u.school == "TAS" %>
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag u.image_url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Info about the athlete</p>
+                </div>
+            </div>
+        </div>
+        <div id="iskl" class="col s12">
+            <% @users.each do |u| %>
+            <% if u.school == "ISKL" %>
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag u.image_url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Info about the athlete</p>
+                </div>
+            </div>
+        </div>
+        <div id="ism" class="col s12">
+            <% @users.each do |u| %>
+            <% if u.school == "ISM" %>
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag u.image_url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Info about the athlete</p>
+                </div>
+            </div>
+        </div>
+        <div id="jis" class="col s12">
+            <% @users.each do |u| %>
+            <% if u.school == "JIS" %>
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag u.image_url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Info about the athlete</p>
+                </div>
+            </div>
+        </div>
+        <div id="sas" class="col s12">
+            <% @users.each do |u| %>
+            <% if u.school == "SAS" %>
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag u.image_url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Info about the athlete</p>
+                </div>
+            </div>
+        </div>
+        <div id="isb" class="col s12">
+            <% @users.each do |u| %>
+            <% if u.school == "ISB" %>
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag u.image_url %>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <%= u.name %>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Info about the athlete</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

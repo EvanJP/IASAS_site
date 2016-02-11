@@ -1,3 +1,44 @@
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-1") !default;
 @import "materialize";
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.topnav{
+    padding-left: 260px;
+}
+
+.container{
+    padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+      .topnav, .container {
+        padding-left: 0;
+      }
+    }
+
+.tabs li.tab a{
+    color: #49a5f5
+}
+
+.tabs li.tab a:hover{
+    color: #64b5f6
+}
+
+.athlete{
+    opacity: 0;
+}
+
+.brand-logo{
+    padding-right: 20px;
+}
+
+.caption{
+    padding-top: 200px;
+}

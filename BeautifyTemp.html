@@ -1,41 +1,33 @@
-
-    <a href="#" data-activates="slide-out" class="navbar-brand button-collapse"><i class="material-icons">menu</i></a>
-
-<ul id="slide-out" class="side-nav fixed personal-side-nav light-side-nav">
-    <div class="logo-wrapper">
-        <a href="#">
-            <div class="avatar-wrapper">
-                <% if current_user %>
-                <%= image_tag current_user.image_url, class: "img-responsive img-circle" %>
+<% provide(:title, "Edit Article")%>
+<div class="container">
+    <div class="row">
+        <%= form_for :article, url: articles_path(@article), method: :patch, html: {class: 'col s12'} do |f|%>
+         <% if @article.errors.any? %>
+            <div id="error_explanation">
+              <h2>
+                <%= pluralize(@article.errors.count, "error") %> prohibited
+                this article from being saved:
+              </h2>
+              <ul>
+                <% @article.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
                 <% end %>
+              </ul>
             </div>
-        </a>
-    </div>
-    <div class="about">
-        <% if current_user %>
-        <p> Welcome <%= current_user.name %></p>
-        <% else %>
-        <a href='/auth/google' class="btn btn-default"><i class="material-icons right">exit to app</i>Sign in</a>
+          <% end %>
+          <p>
+            <%= f.label :title %><br>
+            <%= f.text_field :title %>
+          </p>
+          <p>
+            <%= f.label :text %><br>
+              <%= f.text_area :text, class: "materialize-textarea" %>
+          </p>
+          <p>
+              <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
+                Submit <i class="material-icons right">send</i>
+              <% end %>
+          </p>
         <% end %>
     </div>
-    <% if current_user %>
-    <ul class="edit list-inline text-center">
-        <%= link_to "Sign Out", logout_path, method: :delete, class: "btn btn-default" do %>
-        <i class="material-icons right">exit to app</i>
-        <% end %>
-    </ul>
-    <% end %>
-    <ul class="collapsible collapsible-accordion">
-        <li><%= link_to "Streams", streams_path, class: "waves-effect" %></li>
-        <li><%= link_to "News", articles_path, class: "waves-effect" %></li>
-            <li><a class="collapsible-header waves-effect">Click me</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="#" class="waves-effect">Link</a></li>
-                        <li><a href="#" class="waves-effect">Link</a></li>
-                        <li><a href="#" class="waves-effect">Link</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-</ul>
+</div>
