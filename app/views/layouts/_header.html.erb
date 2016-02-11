@@ -1,15 +1,16 @@
-<ul id="dropProf" class="dropdown-content">
-    <% if current_user %>
-    <%= link_to "View Profile", current_user %>
-    <li class="divider"></li>
-    <%= link_to "Sign Out", logout_path, method: :delete %>
-    <% end %>
-</ul>
+
     <nav class="blue lighten-1" role="navigation">
         <div class="topnav"><a id="logo-container" href="#" class="brand-logo"><%= yield(:title) %></a>
             <ul class="right hide-on-med-and-down">
+                <ul id="dropProf" class="dropdown-content">
+                    <% if current_user %>
+                    <%= link_to "View Profile", current_user,  class: "blue-text" %>
+                    <li class="divider"></li>
+                    <%= link_to "Sign Out", logout_path, method: :delete, class: "blue-text" %>
+                    <% end %>
+                </ul>
                 <% if current_user %>
-                <li><a class="dropdown-button" href="#!" data-activates="dropProf">Welcome User<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropProf">Welcome <%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
                 <% else %>
                 <li><a href="/auth/google"><i class="material-icons right">input</i>Sign In</a></li> 
                 <% end %>

@@ -8,5 +8,6 @@
     });
     $('.slider').slider({full_width: true});
     $('.modal-trigger').leanModal();
+    $('select').material_select();
   }); // end of document ready
 })(jQuery); // end of jQuery name spaces
