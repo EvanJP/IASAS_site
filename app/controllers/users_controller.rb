@@ -14,30 +14,35 @@ class UsersController < ApplicationController
         @user_events = current_user.userevents.build
     end
    
-      def update
-        params[:events][:id].each do |event|
-            if !event.empty?
-                current_user.userevents.build(:event_id => event)
+    def update
+        if current_user.perms == "athlete"
+            params[:events][:id].each do |event|
+                if !event.empty?
+                    current_user.userevents.build(:event_id => event)
+                end
             end
-        end
-        eventlist = Event.all
-        usereventlist = Userevent.all
-        eventstring = ""
-        Userevent.dedupe
-        usereventlist.each do |ue|
-            if current_user.id == ue.user_id
-                eventlist.each do |ei|
-                    if ei.id == ue.event_id
-                        eventstring += ei.event + " "
+            eventlist = Event.all
+            usereventlist = Userevent.all
+            eventstring = ""
+            Userevent.dedupe
+            usereventlist.each do |ue|
+                if current_user.id == ue.user_id
+                    eventlist.each do |ei|
+                        if ei.id == ue.event_id
+                            eventstring += ei.event + " "
+                        end
                     end
                 end
             end
+            current_user.events = eventstring
         end
-        current_user.events = eventstring
-        current_user.school = find_school(current_user.email)
-        current_user.save!
-        redirect_to current_user
-    end
+            current_user.school = find_school(current_user.email)
+            if current_user.update(user_params)
+                redirect_to current_user
+            else
+                render 'edit'
+            end
+        end
     
     def find_school(school = '')
         loc = school.index('@')
@@ -54,8 +59,13 @@ class UsersController < ApplicationController
         elsif school[loc, school.length - 1].include? "jis"
             return "JIS"
         else
-            return "TAS"
+            return "NA"
         end
     end
+    
+    private
+        def user_params
+            params.require(:user).permit(:avatar)
+        end
 end
  

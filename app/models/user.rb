@@ -7,11 +7,14 @@ class User < ActiveRecord::Base
             user.image_url = auth_hash['info']['image']
             user.url = auth_hash['info']['urls']['user.provide.capitalize']
             user.email = auth_hash['info']['email']
-            user.events = nil
-            user.school = nil
             user.save!
             user
         end
     end
+    has_attached_file :avatar,
+      :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+      :url => "/system/:attachment/:id/:style/:filename",
+      :styles => {:small => "150x150>"}
+    do_not_validate_attachment_file_type :avatar
     has_many :userevents
 end

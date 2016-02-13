@@ -1,6 +1,8 @@
 <% provide(:title, "New Article")%>
 <div class="container">
     <div class="row">
+        <% if current_user %>
+        <% if current_user.perms == "journalist" %>
         <%= form_for :article, url: articles_path,  html: {multipart: true, class: 'col s12'} do |f|%>
          <% if @article.errors.any? %>
             <div id="error_explanation">
@@ -26,11 +28,23 @@
         <p>
             <%= f.file_field :image %>
         </p>
+        <p>
+            <%= f.check_box :feature%>
+            <%= f.label "Test?" %>
+        </p>
           <p>
               <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
                 Submit <i class="material-icons right">send</i>
               <% end %>
           </p>
+        <% end %>
+        <% else %>
+        <h4>Restricted Access</h4>
+        <p>You do not have the proper permissions to access this page</p>
+        <% end %>
+        <% else %>
+        <h4>Restricted Access</h4>
+        <p>You do not have the proper permissions to access this page</p>
         <% end %>
     </div>
 </div>

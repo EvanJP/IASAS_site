@@ -1,33 +1,32 @@
-<% provide(:title, "Edit Article")%>
+<% provide(:title, "Edit Profile")%>
+<%= form_for current_user, :html => {:multipart => true, :class => 'col s12'}  do |f| %>
 <div class="container">
+    <% if current_user.perms == "athlete" %>
     <div class="row">
-        <%= form_for :article, url: articles_path(@article), method: :patch, html: {class: 'col s12'} do |f|%>
-         <% if @article.errors.any? %>
-            <div id="error_explanation">
-              <h2>
-                <%= pluralize(@article.errors.count, "error") %> prohibited
-                this article from being saved:
-              </h2>
-              <ul>
-                <% @article.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-              </ul>
+        <h4> Edit Events </h4>
+        <div class="input-field col s12">
+        <%= fields_for(@user_events) do |ue| %>
+            <%= collection_select(:events, :id, @all_events, :id, :event, {}, {:multiple => true}) %>
+        <% end %>
+        </div>
+    </div>
+    <% end %>
+    <div class="row">
+        <%= f.file_field :avatar %>
+    </div>
+    <div class="row">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Put following stuff here</span>
+                <p>Yeah right here</p>
             </div>
-          <% end %>
-          <p>
-            <%= f.label :title %><br>
-            <%= f.text_field :title %>
-          </p>
-          <p>
-            <%= f.label :text %><br>
-              <%= f.text_area :text, class: "materialize-textarea" %>
-          </p>
-          <p>
-              <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
-                Submit <i class="material-icons right">send</i>
-              <% end %>
-          </p>
+        </div>
+    </div>
+    <div class="row">
+        <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
+            <i class="material-icons right">send</i> Update User
         <% end %>
     </div>
+    <% end %>
 </div>
+

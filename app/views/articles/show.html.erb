@@ -10,6 +10,8 @@
             </div>
         </div>
     </div>
+    <% if current_user %>
+    <% if current_user.perms == "journalist" %>
     <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
         <%= link_to edit_article_path(@article), class: "btn-floating btn-large orange" do%>
         <i class="large material-icons">mode_edit</i>
@@ -20,6 +22,8 @@
             <i class="large material-icons">delete</i>
         </a>
     </div>
+    <% end %>
+    <% end %>
 </div>
 
 

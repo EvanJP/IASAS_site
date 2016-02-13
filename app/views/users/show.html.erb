@@ -3,6 +3,9 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
+                <div class="card-image">
+                    <%= image_tag current_user.avatar.url(:small) %>
+                </div>
                 <div class="card-content">
                     <span class="card-title">User Profile</span>
                     <% if current_user %>
@@ -12,9 +15,11 @@
                          <p> Email:
                             <%= current_user.email %>
                         </p>
+                        <% if current_user.perms == "athlete" %>
                         <p> Events:
                             <%= current_user.events %>
                         </p>
+                        <% end %>
                         <% else %>
                             <p> Please sign in </p>
                         <% end %>

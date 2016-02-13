@@ -16,7 +16,7 @@
             <% if u.school == "TAS" %>
             <div class="card">
                 <div class="card-image">
-                    <%= image_tag u.image_url %>
+                    <%= image_tag u.avatar.url %>
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
@@ -32,116 +32,9 @@
                     <p>Info about the athlete</p>
                 </div>
             </div>
+            <% end %>
+            <% end %>
         </div>
-        <div id="iskl" class="col s12">
-            <% @users.each do |u| %>
-            <% if u.school == "ISKL" %>
-            <div class="card">
-                <div class="card-image">
-                    <%= image_tag u.image_url %>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <p>Info about the athlete</p>
-                </div>
-            </div>
-        </div>
-        <div id="ism" class="col s12">
-            <% @users.each do |u| %>
-            <% if u.school == "ISM" %>
-            <div class="card">
-                <div class="card-image">
-                    <%= image_tag u.image_url %>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <p>Info about the athlete</p>
-                </div>
-            </div>
-        </div>
-        <div id="jis" class="col s12">
-            <% @users.each do |u| %>
-            <% if u.school == "JIS" %>
-            <div class="card">
-                <div class="card-image">
-                    <%= image_tag u.image_url %>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <p>Info about the athlete</p>
-                </div>
-            </div>
-        </div>
-        <div id="sas" class="col s12">
-            <% @users.each do |u| %>
-            <% if u.school == "SAS" %>
-            <div class="card">
-                <div class="card-image">
-                    <%= image_tag u.image_url %>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <p>Info about the athlete</p>
-                </div>
-            </div>
-        </div>
-        <div id="isb" class="col s12">
-            <% @users.each do |u| %>
-            <% if u.school == "ISB" %>
-            <div class="card">
-                <div class="card-image">
-                    <%= image_tag u.image_url %>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <%= u.name %>
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <p>Info about the athlete</p>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
