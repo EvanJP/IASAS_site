@@ -15,7 +15,6 @@ class UsersController < ApplicationController
     end
    
     def update
-        if current_user.perms == "athlete"
             params[:events][:id].each do |event|
                 if !event.empty?
                     current_user.userevents.build(:event_id => event)
@@ -29,14 +28,14 @@ class UsersController < ApplicationController
                 if current_user.id == ue.user_id
                     eventlist.each do |ei|
                         if ei.id == ue.event_id
-                            eventstring += ei.event + " "
+                            eventstring += ei.event + ","
                         end
                     end
                 end
             end
             current_user.events = eventstring
-        end
             current_user.school = find_school(current_user.email)
+            current_user.save!
             if current_user.update(user_params)
                 redirect_to current_user
             else
@@ -65,7 +64,7 @@ class UsersController < ApplicationController
     
     private
         def user_params
-            params.require(:user).permit(:avatar)
+            params.require(:user).permit(:avatar, :gender)
         end
 end
  

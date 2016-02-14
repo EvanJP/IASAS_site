@@ -11,19 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160212131407) do
+ActiveRecord::Schema.define(version: 20160213140151) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "image_url"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.boolean  "feature"
+    t.string   "headline_file_name"
+    t.string   "headline_content_type"
+    t.integer  "headline_file_size"
+    t.datetime "headline_updated_at"
   end
 
   create_table "events", force: :cascade do |t|
@@ -58,6 +62,7 @@ ActiveRecord::Schema.define(version: 20160212131407) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "perms"
+    t.string   "gender"
   end
 
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true

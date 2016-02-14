@@ -1,6 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="card">
+            <div class="card-image">
+            <%= image_tag @article.headline.url %>
+        </div>
             <div class="card-content">
                     <h4><%= @article.title %></h4>
                     <%= simple_format(@article.text) %>

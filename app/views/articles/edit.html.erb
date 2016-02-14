@@ -1,7 +1,9 @@
-<% provide(:title, "Edit Article")%>
+<% provide(:title, "EditArticle")%>
 <div class="container">
     <div class="row">
-        <%= form_for @article, method: :patch, html: {class: 'col s12'} do |f|%>
+        <% if current_user %>
+        <% if current_user.perms == "journalist" %>
+        <%= form_for @article, method: :patch,  html: {multipart: true, class: 'col s12'} do |f|%>
          <% if @article.errors.any? %>
             <div id="error_explanation">
               <h2>
@@ -23,8 +25,27 @@
             <%= f.label :text %><br>
               <%= f.text_area :text, class: "materialize-textarea" %>
           </p>
-         <p>
-            <%= f.file_field :image %>
+        <p>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Thumbnail Image</span>
+                    <%= f.file_field :image %>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Headline Image</span>
+                    <%= f.file_field :headline %>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
         </p>
           <p>
               <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
@@ -32,5 +53,15 @@
               <% end %>
           </p>
         <% end %>
+        <% else %>
+        <h4>Restricted Access</h4>
+        <p>You do not have the proper permissions to access this page</p>
+        <% end %>
+        <% else %>
+        <h4>Restricted Access</h4>
+        <p>You do not have the proper permissions to access this page</p>
+        <% end %>
     </div>
 </div>
+
+
