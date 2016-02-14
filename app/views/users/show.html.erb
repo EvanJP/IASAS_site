@@ -1,4 +1,5 @@
 <% provide(:title, "Profile")%>
+<% Userevent.dedupe %>
 <div class="container">
     <div class="row">
         <div class="col s12 l4">
@@ -12,12 +13,36 @@
             </div>
         </div>
         <div class="col s12 l8">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">Users/Events Following:</span>
-                    <p>Put events here</p>
-                </div>
-            </div>
+            <h4>Following:</h4>
+            <% if current_user.following != nil %>
+                <ul class="collapsible" data-collapsible="expandable">
+                    <% current_user.following.each do |u| %>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i><%= u.name %></div>
+                            <div class="collapsible-body">
+                                <% if u.events != nil %>
+                                    <% u_events = u.events %>
+                                    <% temp = u_events.split(',') %>
+                                    <% temp.each do |event| %>
+                                        <% @userevents.each do |ue| %>
+                                            <% if u.id == ue.user_id && Event.find(ue.event_id).event == event %>
+                                                <% if u.gender.strip == "Male" %>
+                                                    <div> - <%= event %> @ <%= Event.find(ue.event_id).mtime %><br></div>
+                                                <% else %>
+                                                    <div> - <%= event %> @ <%= Event.find(ue.event_id).ftime %><br></div>
+                                                <% end %>
+                                            <% end %>
+                                        <% end %>
+                                    <% end %>
+                                <% end %>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
+            <% else %>
+                <p> It looks like you aren't following anyone!</p>
+                <p> Start following people to stay up-to-date on their events!</p>
+            <% end %>
         </div>
     </div>
     <div class="row">
@@ -51,9 +76,11 @@
                         </p>
                         <% end %>
                         <% end %>
-                        <% else %>
-                            <p> Please sign in </p>
-                        <% end %>
+                        <p> Followers: <%= current_user.followers.count %> </p>
+                        <p> Following: <%= current_user.following.count %> </p>
+                    <% else %>
+                        <p> Please sign in </p>
+                    <% end %>
                 </div>
             </div>
         </div>

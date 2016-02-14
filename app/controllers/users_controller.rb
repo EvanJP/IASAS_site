@@ -6,7 +6,9 @@ class UsersController < ApplicationController
     helper_method :current_user
     
     def show
-        
+        @users = User.all
+        @userevents = Userevent.all
+        @events = Event.all
     end
     
     def edit

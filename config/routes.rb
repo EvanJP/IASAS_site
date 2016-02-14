@@ -11,8 +11,13 @@ Rails.application.routes.draw do
     delete '/logout' => 'sessions#destroy'
     get "/auth/:provider/callback" => 'sessions#create'
     get 'userprof' => 'static_pages#userprof'
-    resources :users
+    resources :users do
+        member do
+            get :following, :followers
+        end
+    end
     resources :articles
+    resources :u_relationships, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

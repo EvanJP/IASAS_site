@@ -8,6 +8,8 @@ class StaticPagesController < ApplicationController
     
     def profiles
         @users = User.all
+        @userevents = Userevent.all
+        @events = Event.all
     end
     
     def hfame

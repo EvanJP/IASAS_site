@@ -1,0 +1,2 @@
+module URelationshipsHelper
+end

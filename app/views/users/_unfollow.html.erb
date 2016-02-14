@@ -1,0 +1,5 @@
+<%= form_for(current_user.active_u_relationships.find_by(followed_id: @user.id), html: { method: :delete }, remote: true) do |f| %>
+<%= button_tag(type: 'submit', class: "btn red waves-effect waves-light ") do %>
+        <i class="material-icons right">send</i> Unfollow
+    <% end %>
+<% end %>

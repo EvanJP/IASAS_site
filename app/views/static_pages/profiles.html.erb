@@ -13,37 +13,55 @@
         </div>
         <div id="tas" class="col s12">
             <% @users.each do |u| %>
-            <% if u.perms != nil %>
-            <% if u.perms.strip == "athlete" %>
-            <% if u.school == "TAS" %>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image">
-                        <%= image_tag u.avatar.url(:thumbnail) %>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">
-                            <%= u.name %>
-                            <i class="material-icons right">more_vert</i>
-                        </span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title activator grey-text text-darken-4">
-                            <%= u.name %>
-                            <i class="material-icons right">close</i>
-                        </span>
-                        <h5>Events:</h5>
-                        <% u_events = u.events %>
-                        <% temp = u_events.split(',') %>
-                        <% temp.each do |event| %>
-                        <p> - <%= event %> </p>
+                <% if u.perms != nil %>
+                    <% if u.perms.strip == "athlete" %>
+                        <% if u.school == "TAS" %>
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <%= image_tag u.avatar.url(:thumbnail) %>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4">
+                                        <%= u.name %>
+                                        <i class="material-icons right">more_vert</i>
+                                    </span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title activator grey-text text-darken-4">
+                                        <%= u.name %>
+                                        <i class="material-icons right">close</i>
+                                    </span>
+                                    <h5>Events:</h5>
+                                    <% if u.events != nil %>
+                                        <% u_events = u.events %>
+                                        <% temp = u_events.split(',') %>
+                                        <% temp.each do |event| %>
+                                            <p> - <%= event %> </p>
+                                        <% end %>
+                                    <% end %>
+                                    <% if current_user %>
+                                            <% if current_user.following?(u) %>
+                                                <%= form_for(current_user.active_u_relationships.find_by(followed_id: u.id), html: { method: :delete }, remote: true) do |f| %>
+                                                    <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
+                                                        <i class="material-icons right">send</i> Unfollow
+                                                    <% end %>
+                                                <% end %>
+                                            <% else %>
+                                                <%= form_for(current_user.active_u_relationships.build, remote: true) do |f| %>
+                                                    <div><%= hidden_field_tag :followed_id, u.id %></div>
+                                                    <%= button_tag(type: 'submit', class: "btn waves-effect waves-light") do %>
+                                                        <i class="material-icons right">send</i> Follow
+                                                    <% end %>
+                                                <% end %> 
+                                            <% end %>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
                         <% end %>
-                    </div>
-                </div>
-            </div>
-            <% end %>
-            <% end %>
-            <% end %>
+                    <% end %>
+                <% end %>
             <% end %>
         </div>
         <div id="ism" class="col s12">
