@@ -16,4 +16,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-readyselector
+//= require tinymce
 //= require_tree .

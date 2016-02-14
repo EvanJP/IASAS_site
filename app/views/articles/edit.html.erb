@@ -23,7 +23,8 @@
           </p>
           <p>
             <%= f.label :text %><br>
-              <%= f.text_area :text, class: "materialize-textarea" %>
+              <%= f.text_area :text, class: "tinymce", :rows => 40, :cols => 120 %>
+              <%= tinymce %>
           </p>
         <p>
             <div class="file-field input-field">

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     end
    
     def update
+        if current_user.perms.strip == "athlete"
             params[:events][:id].each do |event|
                 if !event.empty?
                     current_user.userevents.build(:event_id => event)
@@ -34,6 +35,7 @@ class UsersController < ApplicationController
                 end
             end
             current_user.events = eventstring
+        end
             current_user.school = find_school(current_user.email)
             current_user.save!
             if current_user.update(user_params)
@@ -41,7 +43,7 @@ class UsersController < ApplicationController
             else
                 render 'edit'
             end
-        end
+    end
     
     def find_school(school = '')
         loc = school.index('@')

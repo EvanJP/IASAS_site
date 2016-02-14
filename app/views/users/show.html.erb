@@ -28,6 +28,7 @@
                         <p> School:
                             <%= current_user.school %>
                         </p>
+                        <% if current_user.perms != nil %>
                         <% if current_user.perms.strip == 'athlete' %>
                         <p> Events:    
                             <% if current_user.events != nil %>
@@ -38,6 +39,7 @@
                             <% end %>
                             <% end %>
                         </p>
+                        <% end %>
                         <% end %>
                         <% else %>
                             <p> Please sign in </p>

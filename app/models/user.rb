@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
     has_attached_file :avatar,
       :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
       :url => "/system/:attachment/:id/:style/:filename",
-      :styles => {:thumbnail => "480x480#"}
+      :styles => {:thumbnail => "480x480#"},
+    default_url: ->(attachment) { ActionController::Base.helpers.asset_path('default.png') }
     do_not_validate_attachment_file_type :avatar
     has_many :userevents
 end
