@@ -2,6 +2,7 @@
 <%= form_for current_user, :html => {:multipart => true, :class => 'col s12'}  do |f| %>
 <div class="container">
     <div class="row">
+        <% if current_user.perms != nil %>
         <% if current_user.perms.strip == "athlete" %>
         <h4> Edit Events </h4>
         <div class="input-field col s12">
@@ -9,6 +10,7 @@
             <%= collection_select(:events, :id, @all_events, :id, :event, {}, {:multiple => true}) %>
         <% end %>
         </div>
+        <% end %>
         <% end %>
     </div>
     <% if current_user.errors.any? %>
@@ -24,8 +26,12 @@
         </div>
     <% end %>
     <div class="row">
+        <% if current_user.perms != nil %>
+        <% if current_user.perms.strip == "athlete" %>
         <h4> Gender for Events Participating In</h4>
         <%= f.select(:gender, options_for_select, {}, selected: 'Male') %>
+        <% end %>
+        <% end %>
     </div>
     <div class="row">
         <div class="file-field input-fueld">

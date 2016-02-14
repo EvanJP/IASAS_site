@@ -13,6 +13,7 @@
         </div>
         <div id="tas" class="col s12">
             <% @users.each do |u| %>
+            <% if u.perms != nil %>
             <% if u.perms.strip == "athlete" %>
             <% if u.school == "TAS" %>
             <div class="col s4">
@@ -43,9 +44,11 @@
             <% end %>
             <% end %>
             <% end %>
+            <% end %>
         </div>
         <div id="ism" class="col s12">
             <% @users.each do |u| %>
+            <% if u.perms != nil %>
             <% if u.perms.strip == "athlete" %>
             <% if u.school == "ISM" %>
             <div class="col s4">
@@ -76,9 +79,11 @@
             <% end %>
             <% end %>
             <% end %>
+            <% end %>
         </div>
         <div id="iskl" class="col s12">
             <% @users.each do |u| %>
+            <% if u.perms != nil %>
             <% if u.perms.strip == "athlete" %>
             <% if u.school == "ISKL" %>
             <div class="col s4">
@@ -109,9 +114,11 @@
             <% end %>
             <% end %>
             <% end %>
+            <% end %>
         </div>
         <div id="sas" class="col s12">
             <% @users.each do |u| %>
+            <% if u.perms != nil %>
             <% if u.perms.strip == "athlete" %>
             <% if u.school == "SAS" %>
             <div class="col s4">
@@ -142,9 +149,11 @@
             <% end %>
             <% end %>
             <% end %>
+            <% end %>
         </div>
         <div id="isb" class="col s12">
             <% @users.each do |u| %>
+            <% if u.perms != nil %>
             <% if u.perms.strip == "athlete" %>
             <% if u.school == "ISB" %>
             <div class="col s4">
@@ -175,9 +184,11 @@
             <% end %>
             <% end %>
             <% end %>
+            <% end %>
         </div>
         <div id="jis" class="col s12">
             <% @users.each do |u| %>
+            <% if u.perms != nil %>
             <% if u.perms.strip == "athlete" %>
             <% if u.school == "JIS" %>
             <div class="col s4">
@@ -205,6 +216,7 @@
                     </div>
                 </div>
             </div>
+            <% end %>
             <% end %>
             <% end %>
             <% end %>

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     end
    
     def update
+        if current_user.perms != nil
         if current_user.perms.strip == "athlete"
             params[:events][:id].each do |event|
                 if !event.empty?
@@ -35,6 +36,7 @@ class UsersController < ApplicationController
                 end
             end
             current_user.events = eventstring
+        end
         end
             current_user.school = find_school(current_user.email)
             current_user.save!
@@ -60,13 +62,13 @@ class UsersController < ApplicationController
         elsif school[loc, school.length - 1].include? "jis"
             return "JIS"
         else
-            return "NA"
+            return "N/A"
         end
     end
     
     private
         def user_params
-            params.require(:user).permit(:avatar, :gender)
+            params.fetch(:user, {}).permit(:avatar, :gender)
         end
 end
  

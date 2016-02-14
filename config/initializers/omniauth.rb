@@ -5,6 +5,5 @@
             image_aspect_ratio: 'square', 
             image_size: 48, 
             access_type: 'online', 
-            hd: 'tas.tw',
             name: 'google'
     end

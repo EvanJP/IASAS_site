@@ -3,7 +3,7 @@
     <div class="row">
         <% @articles.each do |article| %>
         <div class="col s12 l4">
-            <div class="card">
+            <div class="card hoverable">
                 <div class="card-image">
                     <%= image_tag article.image.url(:thumbnail) %>
                 </div>
@@ -33,4 +33,4 @@
     <% end %>
 </div>
 <% end %>
-<% end %>
+<% end %>   
