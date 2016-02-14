@@ -18,9 +18,8 @@ Website for IASAS Track and Field 2016 at Taipei American School.
   - Create push features
   - Finish Hall of Fame
   - Add Map for Stuff To Do Around Taipei
- > Who's doing the implementation?
-    - Implement countdown
-    - Add info for booster and such
+  - Implement countdown
+  - Add info for booster and such
 
 
 
