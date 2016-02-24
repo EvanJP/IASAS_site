@@ -15,6 +15,7 @@ Website for IASAS Track and Field 2016 at Taipei American School.
 - Countdown (WAITING ON PLUGIN)
 
 ### TODO:
+  - Add mobile and desktop follower button to display dropdown list
   - Create push features
   - Finish Hall of Fame
   - Add Map for Stuff To Do Around Taipei
