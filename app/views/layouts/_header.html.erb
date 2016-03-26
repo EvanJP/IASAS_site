@@ -17,11 +17,8 @@
             </ul>
             <ul id="slide-out" class="side-nav fixed">
                 <li class="logo">
-                    <a id="logo-container" href= '<%= root_path %>' class="brand-logo">
-                        <img src="http://placehold.it/175x65">
-                    </a>                
+                    <%= image_tag "logo.png", class: "brand"%>               
                 </li>
-                <li>Dummy</li>
                 <li><%= link_to "Streams", streams_path %></li>
                 <li><%= link_to "Schedule", schedule_path %></li>
                 <li><%= link_to "Team Rosters", profiles_path %></li>
