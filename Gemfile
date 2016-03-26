@@ -17,6 +17,7 @@ gem 'jquery-turbolinks'
 gem 'tinymce-rails'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'pusher'
+gem 'capistrano'
 # Use SCSS for stylesheets
 
 group :development, :test do
