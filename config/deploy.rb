@@ -20,11 +20,15 @@ set :scm, :git
 set :branch, "master"
 
 # Use local git repository
-set :repository, "."
+set :repository, "https://github.com/PallyPenguin/IASAS_site.git"
 
 # Checkout, compress and send a local copy
 set :deploy_via, :copy
 set :deploy_to, "/home/#{user}/rails_apps/#{application}"
+
+#Setting stages
+set :stages, ["staging", "production"]
+set :default_stage, "staging"
 
 # We have all components of the app on the same server
 server domain, :app, :web, :db, :primary => true
