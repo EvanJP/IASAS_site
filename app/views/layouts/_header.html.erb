@@ -4,15 +4,15 @@
             <ul class="right hide-on-med-and-down">
                 <ul id="dropProf" class="dropdown-content">
                     <% if current_user %>
-                    <%= link_to "View Profile", current_user,  class: "blue-text" %>
-                    <li class="divider"></li>
-                    <%= link_to "Sign Out", logout_path, method: :delete, class: "blue-text" %>
+                        <%= link_to "View Profile", current_user,  class: "blue-text" %>
+                        <li class="divider"></li>
+                        <%= link_to "Sign Out", logout_path, method: :delete, class: "blue-text" %>
                     <% end %>
                 </ul>
                 <% if current_user %>
-                <li><a class="dropdown-button" href="#!" data-activates="dropProf">Welcome <%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropProf">Welcome <%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
                 <% else %>
-                <li><a href="/auth/google"><i class="material-icons right">input</i>Sign In</a></li> 
+                    <li><a href="/auth/google"><i class="material-icons right">input</i>Sign In</a></li> 
                 <% end %>
             </ul>
             <ul id="slide-out" class="side-nav fixed">
@@ -26,6 +26,7 @@
                 <li><%= link_to "News", '/articles' %></li>
                 <li><a href="around.html">Around TAS</a></li>
                 <li><%= link_to "PTA Booster", booster_path %></li>
+                <!-- Include User Sign in -->
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
