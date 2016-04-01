@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12 l12">
-                <h4>Day 1</h4>
+                <h4>Thursday, 7 April 2016</h4>
                 <ul class="collapsible" data-collapsible="expandable">
                     <li>
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>3000m Boys <div class="right">Event Starts At: <%= Event.find(3).mtime %></div></div>
@@ -16,7 +16,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -40,7 +40,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -54,7 +54,7 @@
                             </div></div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Javelin Girls <div class="right">Event Starts At: <%= Event.find(21).ftime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Javelin Girls <div class="right">Event Starts At: <%= Event.find(4).ftime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
@@ -64,7 +64,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -89,7 +89,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -104,7 +104,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Boys Prelims <div class="right">Event Starts At: <%= Event.find(1).mtime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Boys Prelims <div class="right">Event Starts At: <%= Event.find(23).mtime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
@@ -114,7 +114,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -129,7 +129,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Girls Prelims <div class="right">Event Starts At: <%= Event.find(1).ftime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Girls Prelims <div class="right">Event Starts At: <%= Event.find(23).ftime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
@@ -139,7 +139,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -154,7 +154,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Hurdles Boys <div class="right">Event Starts At: <%= Event.find(6).mtime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Hurdles Boys Prelims <div class="right">Event Starts At: <%= Event.find(24).mtime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
@@ -164,7 +164,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -179,7 +179,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Hurdles Girls <div class="right">Event Starts At: <%= Event.find(6).ftime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Hurdles Girls Prelims <div class="right">Event Starts At: <%= Event.find(24).ftime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
@@ -189,82 +189,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
-                                        </div>
-                                        <div class="card-content">
-                                            <span class="card-title"><%= u.name %></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <% end %>
-                            <% end %>
-                                <% end %>
-                                <% end %>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>200m Girls Prelims <div class="right">Event Starts At: <%= Event.find(2).ftime %></div></div>
-                        <div class="collapsible-body">
-                        <div class="row">
-                            <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 2 %>
-                            <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
-                                <div class="col s12 l4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
-                                        </div>
-                                        <div class="card-content">
-                                            <span class="card-title"><%= u.name %></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <% end %>
-                            <% end %>
-                                <% end %>
-                                <% end %>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Shot Put Boys <div class="right">Event Starts At: <%= Event.find(7).mtime %></div></div>
-                        <div class="collapsible-body">
-                        <div class="row">
-                            <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 7 %>
-                            <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
-                                <div class="col s12 l4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
-                                        </div>
-                                        <div class="card-content">
-                                            <span class="card-title"><%= u.name %></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <% end %>
-                            <% end %>
-                                <% end %>
-                                <% end %>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>High Jump Girls <div class="right">Event Starts At: <%= Event.find(8).ftime %></div></div>
-                        <div class="collapsible-body">
-                        <div class="row">
-                            <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 8 %>
-                            <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
-                                <div class="col s12 l4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -289,7 +214,82 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>High Jump Girls <div class="right">Event Starts At: <%= Event.find(8).ftime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 8 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Shot Put Boys <div class="right">Event Starts At: <%= Event.find(7).mtime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 7 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>200m Girls Prelims <div class="right">Event Starts At: <%= Event.find(2).ftime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 2 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -314,7 +314,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -339,7 +339,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -364,7 +364,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -389,7 +389,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -408,20 +408,20 @@
         </div>
         <div class="row">
             <div class="col s12 l12">
-                <h4>Day 2</h4>
+                <h4>Friday, 8 April 2016</h4>
                 <ul class="collapsible" data-collapsible="expandable">
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Hurdles Girls Prelims <div class="right">Event Starts At: <%= Event.find(11).ftime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>110m Hurdles Boys Prelims <div class="right">Event Starts At: <%= Event.find(14).mtime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 11 %>
+                            <% if ue.event_id == 14 %>
                             <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -446,7 +446,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -471,7 +471,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -486,42 +486,17 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>110m Hurdles Boys Prelims <div class="right">Event Starts At: <%= Event.find(14).mtime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Hurdles Girls Prelims <div class="right">Event Starts At: <%= Event.find(29).ftime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 14 %>
-                            <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
-                                <div class="col s12 l4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
-                                        </div>
-                                        <div class="card-content">
-                                            <span class="card-title"><%= u.name %></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <% end %>
-                            <% end %>
-                                <% end %>
-                                <% end %>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Girls Prelims <div class="right">Event Starts At: <%= Event.find(22).ftime %></div></div>
-                        <div class="collapsible-body">
-                        <div class="row">
-                            <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 22 %>
+                            <% if ue.event_id == 11 %>
                             <% @users.each do |u| %>
                             <% if u.id == ue.user_id && u.gender.strip == "Female" %>
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -546,7 +521,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -561,16 +536,66 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>200m Girls Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Girls Prelims <div class="right">Event Starts At: <%= Event.find(22).ftime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 22 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>200m Boys Finals <div class="right">Event Starts At: <%= Event.find(25).mtime %></div></div>
                         <div class="collapsible-body"> TBA </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>200m Boys Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>200m Girls Finals <div class="right">Event Starts At: <%= Event.find(25).ftime %></div></div>
                         <div class="collapsible-body"> TBA </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Girls Hurdles Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Boys Hurdles Finals <div class="right">Event Starts At: <%= Event.find(15).mtime %></div></div>
                         <div class="collapsible-body"> TBA </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Triple Jump Girls <div class="right">Event Starts At: <%= Event.find(5).ftime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 5 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>Discus Boys <div class="right">Event Starts At: <%= Event.find(13).mtime %></div></div>
@@ -583,7 +608,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -598,33 +623,46 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Boys Hurdles Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Girls Hurdles Finals <div class="right">Event Starts At: <%= Event.find(15).ftime %></div></div>
                         <div class="collapsible-body"> TBA </div>
                     </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Triple Jump Girls</div>
-                        <div class="collapsible-body"></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>800m Girls Finals</div>
-                        <div class="collapsible-body"> TBA </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>800m Boys Finals</div>
-                        <div class="collapsible-body"> TBA </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>1600m Medley Relay Girls <div class="right">Event Starts At: <%= Event.find(18).ftime %></div></div>
+                                        <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>800m Boys <div class="right">Event Starts At: <%= Event.find(16).mtime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 18 %>
+                            <% if ue.event_id == 16 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>                    
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>800m Girls <div class="right">Event Starts At: <%= Event.find(16).ftime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 16 %>
                             <% @users.each do |u| %>
                             <% if u.id == ue.user_id && u.gender.strip == "Female" %>
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -649,7 +687,32 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>1600m Medley Relay Girls <div class="right">Event Starts At: <%= Event.find(18).ftime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 18 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -668,36 +731,11 @@
         </div>
         <div class="row">
             <div class="col s12 l12">
-                <h4>Day 3</h4>
+                <h4>Saturday, 9 April 2016</h4>
                 <ul class="collapsible" data-collapsible="expandable">
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Hurdles Girls Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>110m Boys Hurdles Finals <div class="right">Event Starts At: <%= Event.find(27).mtime %></div></div>
                         <div class="collapsible-body"> TBA </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Shot Put Girls <div class="right">Event Starts At: <%= Event.find(7).ftime %></div></div>
-                        <div class="collapsible-body">
-                        <div class="row">
-                            <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 7 %>
-                            <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
-                                <div class="col s12 l4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
-                                        </div>
-                                        <div class="card-content">
-                                            <span class="card-title"><%= u.name %></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <% end %>
-                            <% end %>
-                                <% end %>
-                                <% end %>
-                            </div>
-                        </div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>High Jump Boys <div class="right">Event Starts At: <%= Event.find(8).mtime %></div></div>
@@ -710,7 +748,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -725,17 +763,17 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Long Jump Girls <div class="right">Event Starts At: <%= Event.find(17).ftime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Shot Put Girls <div class="right">Event Starts At: <%= Event.find(7).ftime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 17 %>
+                            <% if ue.event_id == 7 %>
                             <% @users.each do |u| %>
                             <% if u.id == ue.user_id && u.gender.strip == "Female" %>
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -750,29 +788,79 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>110m Boys Hurdles Finals</div>
-                        <div class="collapsible-body"> TBA </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Girls Finals</div>
-                        <div class="collapsible-body"> TBA </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Boys Finals</div>
-                        <div class="collapsible-body"> TBA </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Javelin Boys <div class="right">Event Starts At: <%= Event.find(21).mtime %></div></div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Long Jump Girls <div class="right">Event Starts At: <%= Event.find(12).ftime %></div></div>
                         <div class="collapsible-body">
                         <div class="row">
                             <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 21 %>
+                            <% if ue.event_id == 12 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Female" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Hurdles Girls Finals <div class="right">Event Starts At: <%= Event.find(30).ftime %></div></div>
+                        <div class="collapsible-body"> TBA </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Boys Finals <div class="right">Event Starts At: <%= Event.find(28).mtime %></div></div>
+                        <div class="collapsible-body"> TBA </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>400m Girls Finals <div class="right">Event Starts At: <%= Event.find(28).ftime %></div></div>
+                        <div class="collapsible-body"> TBA </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Javelin Boys <div class="right">Event Starts At: <%= Event.find(4).mtime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 4 %>
                             <% @users.each do |u| %>
                             <% if u.id == ue.user_id && u.gender.strip == "Male" %>
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title"><%= u.name %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <% end %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>1500m Boys <div class="right">Event Starts At: <%= Event.find(20).mtime %></div></div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                            <% @userevents.each do |ue| %>
+                            <% if ue.event_id == 20 %>
+                            <% @users.each do |u| %>
+                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
+                                <div class="col s12 l4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -797,7 +885,7 @@
                                 <div class="col s12 l4">
                                     <div class="card">
                                         <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
+                                            <%= image_tag u.image_url %>
                                         </div>
                                         <div class="card-content">
                                             <span class="card-title"><%= u.name %></span>
@@ -812,44 +900,19 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>1500m Boys <div class="right">Event Starts At: <%= Event.find(20).mtime %></div></div>
-                        <div class="collapsible-body">
-                        <div class="row">
-                            <% @userevents.each do |ue| %>
-                            <% if ue.event_id == 20 %>
-                            <% @users.each do |u| %>
-                            <% if u.id == ue.user_id && u.gender.strip == "Male" %>
-                                <div class="col s12 l4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <%= image_tag u.avatar.url(:thumbnail) %>
-                                        </div>
-                                        <div class="card-content">
-                                            <span class="card-title"><%= u.name %></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <% end %>
-                            <% end %>
-                                <% end %>
-                                <% end %>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Girls Finals</div>       
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Boys Finals <div class="right">Event Starts At: <%= Event.find(1).mtime %></div></div>
                         <div class="collapsible-body"> TBA </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Boys Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>100m Girls Finals <div class="right">Event Starts At: <%= Event.find(1).ftime %></div></div>       
                         <div class="collapsible-body"> TBA </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>4x400m Relay Girls Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>4x400 Relay Boys Finals <div class="right">Event Starts At: <%= Event.find(19).mtime %></div></div>
                         <div class="collapsible-body"> TBA </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>4x400 Relay Boys Finals</div>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>4x400m Relay Girls Finals <div class="right">Event Starts At: <%= Event.find(19).ftime %></div></div>
                         <div class="collapsible-body"> TBA </div>
                     </li>
                 </ul>

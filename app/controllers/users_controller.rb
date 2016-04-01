@@ -41,6 +41,7 @@ class UsersController < ApplicationController
         end
         end
             current_user.school = find_school(current_user.email)
+            current_user.image_url = current_user.school + ".png"
             current_user.save!
             if current_user.update(user_params)
                 redirect_to current_user
@@ -64,7 +65,7 @@ class UsersController < ApplicationController
         elsif school[loc, school.length - 1].include? "jis"
             return "JIS"
         else
-            return "N/A"
+            return "Undefined"
         end
     end
     

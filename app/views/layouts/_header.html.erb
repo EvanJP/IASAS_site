@@ -1,5 +1,5 @@
 
-    <nav class="blue lighten-1" role="navigation">
+    <nav class="blue darken-4" role="navigation">
         <div class="topnav"><a id="logo-container" href="#" class="brand-logo"><%= yield(:title) %></a>
             <ul class="right hide-on-med-and-down">
                 <ul id="dropProf" class="dropdown-content">
@@ -21,13 +21,15 @@
                 </li>
                 <li><%= link_to "Streams", streams_path %></li>
                 <li><%= link_to "Schedule", schedule_path %></li>
+                <li><%= link_to "Results", results_path %></li>
                 <li><%= link_to "Team Rosters", profiles_path %></li>
                 <li><%= link_to "Hall of Fame", hfame_path %></li>
                 <li><%= link_to "News", '/articles' %></li>
-                <li><a href="around.html">Around TAS</a></li>
+                <!-- <li><a href="around.html">Around TAS</a></li> -->
                 <li><%= link_to "PTA Booster", booster_path %></li>
+                <li><a target="_tab" href="https://drive.google.com/file/d/0B9XA6dU02LDBUXdhZnY2ODlpUlU/view?usp=sharing">Event Guidelines</a></li>
                 <!-- Include User Sign in -->
-                <li class="no-padding">
+                <!-- <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
                             <a class="collapsible-header">Event Guidelines</a>
@@ -39,7 +41,7 @@
                             </div>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons left">menu</i></a>
         </div>

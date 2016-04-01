@@ -4,18 +4,21 @@ class User < ActiveRecord::Base
             user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
             user.name = auth_hash['info']['name']
             user.location = auth_hash['info']['location']
-            user.image_url = auth_hash['info']['image']
             user.url = auth_hash['info']['urls']['user.provide.capitalize']
             user.email = auth_hash['info']['email']
             user.save!
             user
         end
     end
-    has_attached_file :avatar,
-      :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
-      :url => "/system/:attachment/:id/:style/:filename",
-      :styles => {:thumbnail => "480x480#"},
-    default_url: ->(attachment) { ActionController::Base.helpers.asset_path('default.png') }
+         has_attached_file :avatar,
+            :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+            :url => "/system/:attachment/:id/:style/:filename",
+            :styles => {:thumbnail => "480x480#"},
+            default_url: ->(attachment) { ActionController::Base.helpers.asset_path('default.png') }
+
+    
+    
+   
     do_not_validate_attachment_file_type :avatar
     has_many :userevents
     has_many :active_u_relationships, class_name: "URelationship",

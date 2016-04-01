@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'schedule' => 'static_pages#schedule'
     get 'eventlist' => 'static_pages#eventlist'
     get 'hfame' => 'static_pages#hfame'
+    get 'results' => 'static_pages#results'
     delete '/logout' => 'sessions#destroy'
     get "/auth/:provider/callback" => 'sessions#create'
     get 'userprof' => 'static_pages#userprof'
