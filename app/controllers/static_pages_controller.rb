@@ -16,6 +16,7 @@ class StaticPagesController < ApplicationController
     end
     
     def results
+        
     end
     
     def userprof

@@ -3,28 +3,1046 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s6"><a href="#Boys">Boys</a></li>
-                <li class="tab col s6"><a href="#Girls">Girls</a></li>
+                <li class="tab col s4"><a href="#Thurs">Thursday</a></li>
+                <li class="tab col s4"><a href="#Fri">Friday</a></li>
+                <li class="tab col s4"><a href="#Sat">Saturday</a></li>
             </ul>
         </div>
-        <div id="Boys" class="col s12">
-            <a class="waves-effect waves-light btn" onclick="Materialize.showStaggeredList('#100m')">100m</a>
-            <a class="waves-effect waves-light btn" onclick="Materialize.showStaggeredList('#200m')">200m</a>
-            <a class="waves-effect waves-light btn">400m</a>
-            <a class="waves-effect waves-light btn">800m</a>
-            <a class="waves-effect waves-light btn">1500m</a>
-            <a class="waves-effect waves-light btn">3000m</a>
+        <div id="Thurs" class="col s12">
+            <h4>Boys</h4>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">100m Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">100m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">200m Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">200m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">3000m</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">3000m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Hurdles</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Hurdles<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">4x800 Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">4x800 Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">4x100m Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">4x100m Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Triple Jump</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Triple Jump <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Shot Put</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Shot Put <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4>Girls</h4>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">100m Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">100m Prelims <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">200m Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">200m Prelims<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">3000m</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">3000m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Hurdles Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Hurdles Prelims<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">4x800m Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">4x800m Relay<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">4x100m Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">4x100m Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Javelin</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Javelin <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">High Jump</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">High Jump <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="Girls" class="col s12">
-
+        <div id="Fri" class="col s12">
+            <h4>Boys</h4>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">110m Hurdles Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">110m Hurdles <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">200m Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">3000m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Hurdles Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Hurdles Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">800m </span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">800m Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">1600m Medley Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">1600m Medley Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Long Jump</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Long Jump <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Discus</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Discus <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4>Girls</h4>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">100m Hurdles Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">100m Hurdles Prelims<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Prelims</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Prelims<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">200m Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">200m Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Hurdles Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Hurdles Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">800m</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">800m <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">1600m Medley Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">1600m Medley Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Discus</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Discus <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Triple Jump</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Triple Jump <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul id="100m" class="result-list">
-            <li class="result"></li>
-            <li class="result">First Place<br>Evan</li>
-        </ul>
-        <ul id="200m" class="result-list">
-            <li class="result"></li>
-            <li class="result">First Place<br>Evan</li>
-        </ul>
+        <div id="Sat" class="col s12">
+            <h4>Boys</h4>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">110m Hurdles Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">110m Hurdles Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">100m Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">100m Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">1500m</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">1500m<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">4x400m Relay </span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">4x400m Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">High Jump</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Long Jump <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Javelin</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Discus <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4>Girls</h4>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">100m Hurdles Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">100m Hurdles Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">400m Finals</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">400m Finals<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">1500m</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">1500m<i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Shot Put</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Shot Put <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">1600m Medley Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">1600m Medley Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Long Jump</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Long Jump <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="card hoverable">
+                        <div class="card-image hide-on-med-and-down waves-effect waves-block waves-light">
+                            <%= image_tag "na.png", class: "activator" %>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">4x400m Relay</span>
+                            <p>First Place: ...</p>
+                            <p>Time: ...</p>
+                            <p><a href="#" class="activator">All Results</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">4x400m Relay <i class="material-icons right">close</i></span>
+                            <p>1st. <br> Name: Time:</p>
+                            <p>2nd. <br> Name: Time:</p>
+                            <p>3rd. <br> Name: Time:</p>
+                            <p>4th. <br> Name: Time:</p>
+                            <p>5th. <br> Name: Time:</p>
+                            <p>6th. <br> Name: Time:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
