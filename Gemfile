@@ -18,6 +18,7 @@ gem 'tinymce-rails'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'pusher'
 gem 'nokogiri'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 
 group :development, :test do
