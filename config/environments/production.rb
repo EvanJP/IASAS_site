@@ -73,8 +73,6 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  config.secret_key_base = 100574493267-vpjlbedreafmurc6s4sv4j68n6p9vaqo.apps.googleusercontent.com
-  config.secret_token = kb0-lMIXOpXwjmY3P2GeVHfq
-  # Do not dump schema after migrations.
+   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
