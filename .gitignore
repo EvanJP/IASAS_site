@@ -17,7 +17,7 @@
 /tmp
 # ignore contents of bower_components
 vendor/bower_components/*
-
+/config/secrets.yml
 # unignore jquery folder
 !vendor/bower_components/jquery
 # ignore contents of jquery folder

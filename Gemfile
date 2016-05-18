@@ -19,21 +19,16 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'pusher'
 gem 'nokogiri'
 gem 'sqlite3'
+gem 'flickraw'
+gem 'yaml_db'
 # Use SCSS for stylesheets
 
 group :development, :test do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-  gem 'capistrano-secrets-yml', require: false
   gem 'byebug'
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-gem 'puma'
 
 group :test do
     gem 'minitest-reporters', '1.0.5'
@@ -43,6 +38,8 @@ end
 
 group :production do
     gem 'rails_12factor', '0.0.2'
+    gem 'unicorn'
+    gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

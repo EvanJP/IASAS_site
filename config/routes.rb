@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :events
     root 'static_pages#home'
+    get 'gallery' => 'static_pages#gallery'
     get 'streams' => 'static_pages#streams'
     get 'profiles' => 'static_pages#profiles'
     get 'booster' => 'static_pages#booster'

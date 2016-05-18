@@ -1,0 +1,144 @@
+<% provide(:title, "Gallery") %>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s1"><a href="#sprints">Sprints</a></li>
+                <li class="tab col s1"><a href="#midd">Mid Distance</a></li>
+                <li class="tab col s1"><a href="#longd">Long Distance</a></li>
+                <li class="tab col s1"><a href="#relays">Relays</a></li>
+                <li class="tab col s1"><a href="#throws">Throws</a></li>
+                <li class="tab col s1"><a href="#hurdles">Hurdles</a></li>
+                <li class="tab col s1"><a href="#jumps">Jumps</a></li>
+                <li class="tab col s1"><a href="#open">Opening Ceremony</a></li>
+                <li class="tab col s1"><a href="#award">Awards</a></li>
+            </ul>
+        </div>
+        <div id="sprints" class="col s12">
+            <h4>Sprints</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666870846705" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[2].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+         <div id="award" class="col s12">
+            <h4>Awards</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/albums/72157664648709813" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[0].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="midd" class="col s12">
+            <h4>Mid Distance</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666755691582" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[1].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="longd" class="col s12">
+            <h4>Long Distance</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666697572342" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[3].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="relays" class="col s12">
+            <h4>Relays</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666797629936" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[4].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="throws" class="col s12">
+            <h4>Throws</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666869482645" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[5].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="hurdles" class="col s12">
+            <h4>Hurdles</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666797607056" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[6].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="jumps" class="col s12">
+            <h4>Jumps</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666720357642" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[7].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="open" class="col s12">
+            <h4>Opening Ceremony</h4>
+            <a href="https://www.flickr.com/photos/141699465@N07/sets/72157666797540406" style="font-size:200%">Link to Flickr Album</a>
+            <div class="divider"></div>
+            <% @photosets[7].each do |image| %>
+            <div class="col s6 l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <%= image_tag image, class: "materialboxed" %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,17 @@ class StaticPagesController < ApplicationController
     
     def streams
     end
+     
+    def gallery
+        FlickRaw.api_key = '213bee30b874099c0dbef4ece443d8b6'
+        FlickRaw.shared_secret = '1940f2369c4de7b8'
+
+        @photosets = flickr.photosets.getList(user_id: '141699465@N07').map do |set|
+            flickr.photosets.getPhotos(photoset_id: set['id']).photo.map do |photo|
+                FlickRaw.url_b(photo)
+            end
+        end
+    end
     
     def profiles
         @users = User.all
